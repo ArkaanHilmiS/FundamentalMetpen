@@ -24,9 +24,8 @@ Repository ini berisi catatan komprehensif mengenai metodologi penelitian yang m
 - **BAB 1 - Pendahuluan** - Latar belakang, rumusan masalah, tujuan, manfaat
 - **BAB 2 - Tinjauan Pustaka** - Penelitian terdahulu, landasan teori, kerangka pemikiran
 - **BAB 3 - Metodologi** - Desain penelitian, populasi, sampel, teknik analisis
-- **BAB 4 - Hasil & Pembahasan** - Penyajian data, analisis, interpretasi
-- **BAB 5 - Diskusi** - Hubungan hasil dengan teori, penelitian terdahulu, dan tujuan
-- **BAB 6 - Kesimpulan & Saran** - Ringkasan temuan dan rekomendasi
+- **BAB 4 - Hasil & Pembahasan** - Perancangan, implementasi, hasil penelitian, analisis, dan interpretasi
+- **BAB 5 - Kesimpulan & Saran** - Kesimpulan dari temuan dan rekomendasi akademis/praktis
 
 ### Referensi
 - **Kesalahan Fatal** - 18 kesalahan umum yang harus dihindari
@@ -86,8 +85,9 @@ Catatan ini cocok untuk:
 
 ### Untuk yang Sedang Menulis
 1. Ikuti struktur [Abstrak](#abstrak)
-2. Pahami prinsip setiap [BAB 1-6](#bab1)
+2. Pahami prinsip setiap [BAB 1-5](#bab1)
 3. Periksa [Kesalahan Fatal](#kesalahan) yang harus dihindari
+4. **Penting**: Bab 4 harus menyertakan sub-bab Perancangan dan Implementasi sebelum Hasil dan Pembahasan
 
 ### Quick Reference
 - 🎯 [Prinsip Emas](#prinsip) - Panduan cepat untuk setiap bagian
