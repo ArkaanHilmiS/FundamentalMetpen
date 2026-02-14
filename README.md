@@ -1,4 +1,4 @@
-# � Catatan Fundamental Metodologi Penelitian
+# Catatan Fundamental Metodologi Penelitian
 
 Catatan lengkap dan terstruktur tentang fundamental metodologi penelitian untuk keperluan akademik. Disusun dalam format HTML interaktif dengan navigasi sidebar yang memudahkan pembelajaran.
 
