@@ -75,6 +75,42 @@ Catatan ini cocok untuk:
 - **Mobile-friendly** - Responsive untuk berbagai ukuran layar
 - **Clean Design** - Typography yang nyaman dibaca
 - **Well-organized** - Struktur yang sistematis dan logis
+- **🔒 Protected** - Advanced code protection system
+
+## 🔒 Code Protection
+
+Proyek ini dilengkapi dengan **Advanced Protection System** yang melindungi konten dari:
+
+### ✅ Proteksi Aktif:
+- ❌ **Right-click disabled** - Context menu diblokir
+- ❌ **Text selection disabled** - Tidak bisa select/copy text
+- ❌ **DevTools shortcuts blocked** - F12, Ctrl+Shift+I, Ctrl+U terblokir
+- ❌ **Copy/paste disabled** - Ctrl+C dan Ctrl+V diblokir
+- 🔍 **DevTools detection** - Deteksi otomatis jika DevTools dibuka
+- 🚫 **Automatic response** - Blur konten & tampilkan warning overlay
+
+### 📦 Build for Production:
+
+Untuk deployment dengan obfuscation & minification maksimal:
+
+```powershell
+# Quick build
+.\build-production.ps1
+
+# Atau via NPM
+npm install
+npm run build
+```
+
+Hasil build ada di folder `dist/` - **siap deploy!**
+
+### 📚 Documentation:
+- 🚀 **Quick Start:** [`QUICK-START.md`](QUICK-START.md)
+- 📖 **Full Guide:** [`PROTECTION-GUIDE.md`](PROTECTION-GUIDE.md)
+- ⚙️ **Configuration:** Edit `js/protection.js`
+
+### ⚠️ Important:
+Proteksi ini adalah **lapisan tambahan**, bukan solusi 100% aman. Jangan taruh data sensitif (API keys, passwords) di frontend!
 
 ## 📌 Topik Penting
 

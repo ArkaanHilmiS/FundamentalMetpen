@@ -1,0 +1,37 @@
+{
+  "name": "fundamental-metpen",
+  "version": "1.0.0",
+  "description": "Catatan Lengkap Fundamental Penelitian dengan Advanced Code Protection",
+  "author": "Arkaan Hilmi",
+  "license": "MIT",
+  "scripts": {
+    "build": "powershell -ExecutionPolicy Bypass -File ./build-production.ps1",
+    "build:quick": "powershell -Command \"Write-Host 'Quick build...' -ForegroundColor Cyan; npm run obfuscate; npm run minify\"",
+    "obfuscate": "javascript-obfuscator js/protection.js --output js/protection.min.js --compact true --self-defending true",
+    "minify": "terser js/app.js -o js/app.min.js -c -m",
+    "minify:css": "cleancss -o css/styles.min.css css/styles.css",
+    "serve": "powershell -Command \"Write-Host 'Opening in browser...' -ForegroundColor Green; Start-Process 'index.html'\"",
+    "serve:dist": "powershell -Command \"Write-Host 'Opening production build...' -ForegroundColor Green; Start-Process 'dist/index.html'\"",
+    "clean": "powershell -Command \"if (Test-Path dist) { Remove-Item -Recurse -Force dist }; Write-Host 'Cleaned dist folder' -ForegroundColor Green\"",
+    "install:tools": "npm install -g javascript-obfuscator terser clean-css-cli"
+  },
+  "devDependencies": {
+    "javascript-obfuscator": "^4.1.0",
+    "terser": "^5.26.0",
+    "clean-css-cli": "^5.6.3"
+  },
+  "keywords": [
+    "penelitian",
+    "research",
+    "metodologi",
+    "fundamental",
+    "notes",
+    "catatan",
+    "protected",
+    "obfuscated"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arkaanhilmi/fundamental-metpen"
+  }
+}

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🔒 Protection Test Page</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .container {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  }
+  
+  h1 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 32px;
+  }
+  
+  .subtitle {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+  
+  .test-section {
+    margin: 30px 0;
+    padding: 20px;
+    border-radius: 12px;
+    background: #f8f9fa;
+  }
+  
+  .test-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .test-item {
+    padding: 12px;
+    margin: 8px 0;
+    background: white;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .test-item.should-block {
+    border-left-color: #e74c3c;
+  }
+  
+  .test-item.should-work {
+    border-left-color: #2ecc71;
+  }
+  
+  .status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 10px;
+  }
+  
+  .status-active {
+    background: #d4edda;
+    color: #155724;
+  }
+  
+  .status-blocked {
+    background: #f8d7da;
+    color: #721c24;
+  }
+  
+  .selectable-text {
+    padding: 15px;
+    background: #fff3cd;
+    border-radius: 8px;
+    margin: 15px 0;
+    border: 2px dashed #ffc107;
+    color: #856404;
+  }
+  
+  .copyable-text {
+    padding: 15px;
+    background: #d1ecf1;
+    border-radius: 8px;
+    margin: 15px 0;
+    border: 2px dashed #17a2b8;
+    color: #0c5460;
+    font-family: 'Courier New', monospace;
+  }
+  
+  .result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .result.success {
+    background: #d4edda;
+    color: #155724;
+  }
+  
+  .result.error {
+    background: #f8d7da;
+    color: #721c24;
+  }
+  
+  button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+  
+  button:hover {
+    background: #5568d3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  }
+  
+  .info-box {
+    background: #e7f3ff;
+    border-left: 4px solid #2196F3;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    color: #0d47a1;
+  }
+  
+  .warning-box {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    color: #856404;
+  }
+  
+  code {
+    background: #f4f4f4;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+  }
+  
+  .back-link {
+    display: inline-block;
+    margin-top: 30px;
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+  
+  .back-link:hover {
+    color: #5568d3;
+    transform: translateX(-5px);
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>🔒 Protection Test Page</h1>
+  <p class="subtitle">Test semua fitur proteksi yang telah diimplementasikan</p>
+  
+  <div class="info-box">
+    <strong>ℹ Cara Menggunakan:</strong> Coba lakukan aksi-aksi di bawah ini. Jika proteksi aktif, aksi akan diblokir dan muncul notifikasi.
+  </div>
+
+  <!-- Test 1: Right Click -->
+  <div class="test-section">
+    <div class="test-title">
+      🖱️ Test 1: Right Click Protection
+      <span class="status-badge status-active">ACTIVE</span>
+    </div>
+    <div class="test-item should-block">
+      <strong>Test:</strong> Coba klik kanan di area ini atau di mana saja
+    </div>
+    <div class="result" id="result-rightclick" style="display: none;">
+      ✅ Right-click protection bekerja dengan baik!
+    </div>
+  </div>
+
+  <!-- Test 2: Text Selection -->
+  <div class="test-section">
+    <div class="test-title">
+      📝 Test 2: Text Selection Protection
+      <span class="status-badge status-active">ACTIVE</span>
+    </div>
+    <div class="test-item should-block">
+      <strong>Test:</strong> Coba select/drag text ini dengan mouse atau keyboard
+    </div>
+    <div class="selectable-text">
+      Ini adalah contoh teks yang TIDAK BISA di-select. Coba drag mouse di atas teks ini atau gunakan Shift+Arrow keys.
+    </div>
+  </div>
+
+  <!-- Test 3: Copy/Paste -->
+  <div class="test-section">
+    <div class="test-title">
+      📋 Test 3: Copy Protection
+      <span class="status-badge status-active">ACTIVE</span>
+    </div>
+    <div class="test-item should-block">
+      <strong>Test:</strong> Coba tekan Ctrl+C atau Ctrl+A lalu Ctrl+C
+    </div>
+    <div class="copyable-text">
+      SECRET_API_KEY=abc123xyz789
+    </div>
+    <p style="margin-top: 10px; font-size: 14px; color: #666;">
+      Jika berhasil copy, coba paste di field ini: <input type="text" placeholder="Paste di sini..." style="padding: 8px; border: 1px solid #ddd; border-radius: 4px; width: 200px;">
+    </p>
+  </div>
+
+  <!-- Test 4: Keyboard Shortcuts -->
+  <div class="test-section">
+    <div class="test-title">
+      ⌨️ Test 4: DevTools Shortcuts Protection
+      <span class="status-badge status-blocked">BLOCKED</span>
+    </div>
+    <div class="test-item should-block">
+      <strong>F12</strong> - Open DevTools
+    </div>
+    <div class="test-item should-block">
+      <strong>Ctrl+Shift+I</strong> - Inspect Element
+    </div>
+    <div class="test-item should-block">
+      <strong>Ctrl+Shift+J</strong> - Console
+    </div>
+    <div class="test-item should-block">
+      <strong>Ctrl+U</strong> - View Page Source
+    </div>
+    <div class="test-item should-block">
+      <strong>Ctrl+S</strong> - Save Page
+    </div>
+    <p style="margin-top: 10px; font-size: 14px; color: #666;">
+      Coba tekan shortcut di atas. Seharusnya tidak ada yang berfungsi! 🚫
+    </p>
+  </div>
+
+  <!-- Test 5: DevTools Detection -->
+  <div class="test-section">
+    <div class="test-title">
+      🔍 Test 5: DevTools Detection
+      <span class="status-badge status-active">ACTIVE</span>
+    </div>
+    <div class="test-item should-block">
+      <strong>Test:</strong> Coba buka DevTools dari menu browser (Browser Menu → More Tools → Developer Tools)
+    </div>
+    <div class="warning-box">
+      <strong>⚠️ Expected Behavior:</strong>
+      <ul style="margin: 10px 0 0 20px;">
+        <li>Konten akan di-blur (kabur)</li>
+        <li>Muncul overlay "ACCESS DENIED"</li>
+        <li>Console akan di-clear otomatis</li>
+        <li>Tutup DevTools untuk kembali normal</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Test 6: Input Fields -->
+  <div class="test-section">
+    <div class="test-title">
+      ✅ Test 6: Input Fields (Should Work)
+      <span class="status-badge status-active">ALLOWED</span>
+    </div>
+    <div class="test-item should-work">
+      <strong>Test:</strong> Input dan textarea harusnya tetap bisa di-select dan di-copy
+    </div>
+    <p style="margin: 10px 0; font-size: 14px; color: #666;">Type something:</p>
+    <input type="text" placeholder="Test input..." style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 6px; margin-bottom: 10px; font-size: 14px;">
+    <textarea placeholder="Test textarea..." style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 6px; min-height: 80px; font-size: 14px; font-family: inherit;"></textarea>
+    <p style="margin-top: 10px; font-size: 13px; color: #28a745;">
+      ✅ Input fields harus tetap berfungsi normal (bisa select, copy, paste)
+    </p>
+  </div>
+
+  <!-- Test 7: Drag & Drop -->
+  <div class="test-section">
+    <div class="test-title">
+      🖼️ Test 7: Drag & Drop Protection
+      <span class="status-badge status-blocked">BLOCKED</span>
+    </div>
+    <div class="test-item should-block">
+      <strong>Test:</strong> Coba drag image di bawah ini
+    </div>
+    <div style="text-align: center; margin: 20px 0;">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='100'%3E%3Crect fill='%234CAF50' width='200' height='100' rx='10'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='Arial' font-size='16' font-weight='bold'%3EDRAG ME!%3C/text%3E%3C/svg%3E" alt="Test Image" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    </div>
+    <p style="font-size: 13px; color: #666; text-align: center;">
+      Image tidak bisa di-drag! 🚫
+    </p>
+  </div>
+
+  <!-- Results Summary -->
+  <div class="test-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+    <div class="test-title" style="color: white;">
+      📊 Summary
+    </div>
+    <p style="margin: 10px 0;">Jika semua test berhasil, berarti proteksi bekerja dengan sempurna! 🎉</p>
+    <ul style="margin: 10px 0 10px 20px; line-height: 1.8;">
+      <li>✅ Context menu diblokir</li>
+      <li>✅ Text selection disabled</li>
+      <li>✅ Copy/paste diblokir</li>
+      <li>✅ DevTools shortcuts tidak berfungsi</li>
+      <li>✅ DevTools detection aktif</li>
+      <li>✅ Drag & drop diblokir</li>
+      <li>✅ Input fields tetap berfungsi</li>
+    </ul>
+  </div>
+
+  <div class="info-box">
+    <strong>💡 Tips:</strong>
+    <ul style="margin: 10px 0 0 20px;">
+      <li>Test di berbagai browser (Chrome, Firefox, Edge)</li>
+      <li>Test di mobile device juga</li>
+      <li>Baca <code>PROTECTION-GUIDE.md</code> untuk info lengkap</li>
+      <li>Edit <code>js/protection.js</code> untuk konfigurasi</li>
+    </ul>
+  </div>
+
+  <a href="index.html" class="back-link">← Kembali ke Main App</a>
+</div>
+
+<!-- Load Protection System -->
+<script src="js/protection.js"></script>
+
+<script>
+  // Add some test feedback
+  document.addEventListener('contextmenu', function() {
+    const result = document.getElementById('result-rightclick');
+    if (result) {
+      result.style.display = 'block';
+      result.className = 'result success';
+      setTimeout(() => {
+        result.style.display = 'none';
+      }, 3000);
+    }
+  });
+</script>
+
+</body>
+</html>
