@@ -1,159 +1,115 @@
-# 💰 Aplikasi Keuangan - Personal Finance Manager
+# � Catatan Fundamental Metodologi Penelitian
 
-Aplikasi pencatatan keuangan dengan GUI modern, tema pastel, dan integrasi Google Calendar.
+Catatan lengkap dan terstruktur tentang fundamental metodologi penelitian untuk keperluan akademik. Disusun dalam format HTML interaktif dengan navigasi sidebar yang memudahkan pembelajaran.
 
-## ✨ Fitur
+## 📖 Tentang
 
-- 📊 **GUI Modern** - Interface cantik dengan tema pastel dan rounded corners
-- ➕ **Tambah Transaksi** - Catat pemasukan dan pengeluaran dengan mudah
-- 📅 **Integrasi Google Calendar** - Transaksi otomatis tersimpan di kalender
-- 📈 **Ringkasan Keuangan** - Lihat total pemasukan, pengeluaran, dan saldo
-- 📋 **Riwayat Transaksi** - Tabel lengkap dengan warna coding
-- 🗑️ **Hapus Transaksi** - Hapus transaksi yang salah
-- 💾 **Penyimpanan Lokal** - Data tersimpan di file JSON lokal
+Repository ini berisi catatan komprehensif mengenai metodologi penelitian yang mencakup:
+- Definisi dan konsep dasar penelitian
+- Teknik pengambilan data
+- Metode penelitian (kuantitatif, kualitatif, mixed method)
+- Struktur penulisan karya ilmiah (Abstrak, Bab 1-6)
+- Tips menulis dan kesalahan umum yang harus dihindari
 
-## 🎨 Tema
+## 📂 Isi Materi
 
-- **Warna Pastel** yang lembut untuk mata
-- **Rounded Interface** yang modern
-- **Color Coding**:
-  - 🟢 Hijau muda = Pemasukan
-  - 🔴 Merah muda = Pengeluaran
+### Prolog
+- **Definisi Penelitian** - Pengertian, karakteristik, dan tujuan penelitian
+- **Teknik Pengambilan Data** - Wawancara, observasi, kuesioner, FGD, dokumentasi, dan tes
+- **Metode Penelitian** - Kuantitatif, kualitatif, dan mixed method
+- **Jenjang Akademik** - Perbedaan skripsi, tesis, dan disertasi
 
-## 🚀 Cara Install
+### Bagian Utama Karya Ilmiah
+- **Abstrak** - Struktur 4 paragraf: latar belakang, masalah, metodologi, hasil
+- **BAB 1 - Pendahuluan** - Latar belakang, rumusan masalah, tujuan, manfaat
+- **BAB 2 - Tinjauan Pustaka** - Penelitian terdahulu, landasan teori, kerangka pemikiran
+- **BAB 3 - Metodologi** - Desain penelitian, populasi, sampel, teknik analisis
+- **BAB 4 - Hasil & Pembahasan** - Penyajian data, analisis, interpretasi
+- **BAB 5 - Diskusi** - Hubungan hasil dengan teori, penelitian terdahulu, dan tujuan
+- **BAB 6 - Kesimpulan & Saran** - Ringkasan temuan dan rekomendasi
 
-### 1. Install Dependencies
+### Referensi
+- **Kesalahan Fatal** - 18 kesalahan umum yang harus dihindari
+- **Prinsip Emas** - Panduan praktis untuk setiap bagian penelitian
 
-```bash
-cd "d:\0. ARKAAN HILMI"
-pip install -r requirements.txt
-```
+## 🚀 Cara Menggunakan
 
-### 2. (Opsional) Setup Google Calendar
+### 1. Buka File HTML
 
-Jika ingin integrasi dengan Google Calendar, ikuti panduan di [SETUP_GOOGLE_CALENDAR.md](SETUP_GOOGLE_CALENDAR.md)
-
-**Catatan:** Aplikasi tetap berjalan normal tanpa Google Calendar!
-
-### 3. Jalankan Aplikasi
-
-```bash
-python "# aplikasi keuangan.py"
-```
-
-## 🖥️ Membuat Shortcut di Desktop
-
-### Cara Otomatis:
+Cukup buka file `catatan-fundamental-penelitian.html` di browser:
 
 ```bash
-python create_desktop_shortcut.py
+# Cara 1: Double-click file HTML
+catatan-fundamental-penelitian.html
+
+# Cara 2: Buka dari terminal/command prompt
+start catatan-fundamental-penelitian.html
 ```
 
-### Cara Manual:
+### 2. Navigasi
 
-1. Klik kanan di desktop → New → Shortcut
-2. Browse ke file `# aplikasi keuangan.py`
-3. Beri nama: "Aplikasi Keuangan"
-4. Klik Finish
+- Gunakan **sidebar kiri** untuk berpindah antar topik
+- Klik pada menu yang diinginkan
+- Semua konten sudah terorganisir dengan baik
 
-## 📖 Cara Penggunaan
+### 3. Fitur Interaktif
 
-### Menambah Transaksi
+- ✅ **Sidebar Navigation** - Navigasi cepat ke topik tertentu
+- 🎨 **Color-coded Cards** - Informasi penting dengan kode warna
+- 📋 **Structured Tables** - Data terorganisir dalam tabel
+- ⚠️ **Warning Boxes** - Highlight kesalahan yang harus dihindari
+- 💡 **Tip Boxes** - Tips dan best practices
+- 📝 **Question Boxes** - Pertanyaan kunci yang harus dijawab
 
-1. Pilih tanggal transaksi
-2. Pilih tipe: Pemasukan atau Pengeluaran
-3. Masukkan jumlah (angka saja, tanpa Rp atau titik)
-4. Masukkan kategori (contoh: gaji, makanan, transportasi)
-5. Masukkan keterangan
-6. Klik tombol "✓ Tambah"
+## 🎯 Target Pengguna
 
-### Melihat Riwayat
+Catatan ini cocok untuk:
+- 🎓 Mahasiswa yang sedang menyusun skripsi/tesis/disertasi
+- 👨‍🏫 Dosen pembimbing penelitian
+- 🔬 Peneliti pemula
+- 📚 Siapa saja yang ingin memahami metodologi penelitian
 
-- Semua transaksi ditampilkan di tabel sebelah kanan
-- Warna hijau muda = Pemasukan
-- Warna merah muda = Pengeluaran
+## ⚡ Keunggulan
 
-### Melihat Ringkasan
+- **Offline-first** - Tidak perlu koneksi internet
+- **Self-contained** - Semua dalam satu file HTML
+- **Mobile-friendly** - Responsive untuk berbagai ukuran layar
+- **Clean Design** - Typography yang nyaman dibaca
+- **Well-organized** - Struktur yang sistematis dan logis
 
-- Total Pemasukan, Total Pengeluaran, dan Saldo ditampilkan di kiri bawah
-- Saldo hijau = positif, merah = negatif
+## 📌 Topik Penting
 
-### Menghapus Transaksi
+### Untuk Pemula
+1. Mulai dari [Definisi Penelitian](#definisi)
+2. Pahami [Metode Penelitian](#metode)
+3. Pelajari [Teknik Pengambilan Data](#teknik)
 
-1. Klik transaksi yang ingin dihapus di tabel
-2. Klik tombol "🗑 Hapus Transaksi"
-3. Konfirmasi penghapusan
+### Untuk yang Sedang Menulis
+1. Ikuti struktur [Abstrak](#abstrak)
+2. Pahami prinsip setiap [BAB 1-6](#bab1)
+3. Periksa [Kesalahan Fatal](#kesalahan) yang harus dihindari
 
-## 📁 File yang Dibuat
+### Quick Reference
+- 🎯 [Prinsip Emas](#prinsip) - Panduan cepat untuk setiap bagian
+- ⚠️ [Kesalahan Fatal](#kesalahan) - Yang TIDAK boleh dilakukan
+- 📊 [Relasi Antar Bagian](#home) - Memahami keterkaitan antar bab
 
-- `data_keuangan.json` - Database lokal transaksi
-- `credentials.json` - (Opsional) Kredensial Google Calendar
-- `token.pickle` - (Opsional) Token akses Google Calendar
+## 💡 Tips Belajar
 
-## 🔒 Keamanan
+1. **Baca Berurutan** - Mulai dari prolog hingga bagian utama
+2. **Bookmark** - Tandai bagian penting di browser
+3. **Praktik Langsung** - Terapkan saat menulis penelitian
+4. **Review Berkala** - Kembali ke catatan saat butuh referensi
+5. **Perhatikan Warning** - Hindari kesalahan fatal yang disebutkan
 
-- ✅ Semua data disimpan **lokal** di komputer Anda
-- ✅ Tidak ada data yang dikirim ke server eksternal (kecuali Google Calendar jika diaktifkan)
-- ⚠️ **JANGAN share** file `credentials.json` dan `token.pickle`
+## 📄 Lisensi
 
-## ✅ Status Aplikasi
+Catatan ini dibuat untuk keperluan pendidikan dan dapat digunakan secara bebas untuk pembelajaran pribadi.
 
-**Semua fitur sudah berfungsi dengan baik!**
+## 👨‍💻 Tentang
 
-Untuk mengecek instalasi:
-```bash
-python check_installation.py
-```
-
-## 🛠️ Troubleshooting
-
-**Lihat panduan lengkap di:** [TROUBLESHOOTING.md](TROUBLESHOOTING.md)
-
-### Quick Fixes:
-
-**Import warnings di VS Code?**
-- ✅ Ini normal! Abaikan saja, aplikasi tetap jalan sempurna
-
-**Google Calendar tidak connect?**
-- ✅ Aplikasi tetap jalan normal tanpa calendar
-
-**Aplikasi tidak muncul?**
-```bash
-python check_installation.py  # cek dependencies
-python "# aplikasi keuangan.py"  # lihat error message
-```
-
-**Error saat install?**
-```bash
-pip install -r requirements.txt
-```
-
-## 💡 Tips
-
-1. **Backup Data**: Copy file `data_keuangan.json` secara berkala
-2. **Kategori Konsisten**: Gunakan nama kategori yang sama untuk laporan lebih rapi
-3. **Keterangan Jelas**: Tulis keterangan yang detail untuk ingat transaksi
-4. **Cek Saldo**: Lihat ringkasan secara rutin untuk monitor keuangan
-
-## 🎯 Roadmap
-
-- [ ] Export ke Excel/PDF
-- [ ] Grafik dan chart keuangan
-- [ ] Budget tracking
-- [ ] Reminder pembayaran rutin
-- [ ] Multi-currency support
-
-## 📝 Lisensi
-
-Free to use for personal use.
-
-## 👨‍💻 Dibuat dengan
-
-- Python 3
-- Tkinter (GUI)
-- Google Calendar API
-- tkcalendar
+Catatan ini disusun sebagai referensi pembelajaran metodologi penelitian dengan fokus pada praktik penulisan karya ilmiah yang baik dan benar.
 
 ---
 
-**Selamat mengelola keuangan! 💰**
+**Selamat belajar! 📚✨**
