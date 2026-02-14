@@ -47,7 +47,9 @@ class ContentLoader {
    * @private
    */
   async _fetchContent(filePath) {
-    const response = await fetch(filePath);
+    // Tambahkan timestamp untuk cache busting
+    const cacheBuster = `?v=${Date.now()}`;
+    const response = await fetch(filePath + cacheBuster);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
