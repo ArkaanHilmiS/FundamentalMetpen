@@ -85,7 +85,7 @@ class App {
       
       // Enable/disable features
       enablePreload: true,
-      enableCache: true,
+      enableCache: false, // Disabled untuk selalu fetch fresh content
       showLoadingIndicator: true
     };
   }
