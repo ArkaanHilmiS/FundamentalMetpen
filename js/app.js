@@ -121,6 +121,14 @@ class App {
       this._handleKeyboardShortcuts(e);
     });
 
+    // Handle clear cache button
+    const clearCacheBtn = document.getElementById('clear-cache-btn');
+    if (clearCacheBtn) {
+      clearCacheBtn.addEventListener('click', () => {
+        this._handleClearCache();
+      });
+    }
+
     console.log('🎧 Event listeners attached');
   }
 
@@ -296,9 +304,53 @@ class App {
    * @param {string|null} sectionId
    */
   clearCache(sectionId = null) {
-    if (this.config.enableCache) {
-      this.contentLoader.clearCache(sectionId);
-      console.log(`🗑️ Cache cleared${sectionId ? ` for ${sectionId}` : ''}`);
+    this.contentLoader.clearCache(sectionId);
+    // Update app version untuk force refresh
+    window.APP_VERSION = Date.now();
+    console.log(`🗑️ Cache cleared${sectionId ? ` for ${sectionId}` : ''}`);
+  }
+
+  /**
+   * Handle clear cache button click
+   * @private
+   */
+  async _handleClearCache() {
+    const statusEl = document.getElementById('cache-status');
+    const currentSection = this.getCurrentSection();
+    
+    try {
+      // Show loading status
+      if (statusEl) {
+        statusEl.textContent = '⏳ Clearing...';
+        statusEl.className = 'cache-status active';
+      }
+
+      // Clear cache
+      this.clearCache();
+      
+      // Reload current section
+      await this.reloadSection(currentSection);
+      
+      // Show success message
+      if (statusEl) {
+        statusEl.textContent = '✓ Cache cleared!';
+        setTimeout(() => {
+          statusEl.className = 'cache-status';
+          statusEl.textContent = '';
+        }, 2000);
+      }
+      
+      console.log('✅ Cache cleared and content reloaded');
+    } catch (error) {
+      console.error('❌ Error clearing cache:', error);
+      if (statusEl) {
+        statusEl.textContent = '✗ Error';
+        statusEl.className = 'cache-status error';
+        setTimeout(() => {
+          statusEl.className = 'cache-status';
+          statusEl.textContent = '';
+        }, 2000);
+      }
     }
   }
 

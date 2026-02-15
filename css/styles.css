@@ -35,7 +35,7 @@ body {
   min-width: 260px;
   background: var(--sidebar);
   color: var(--sidebar-text);
-  padding: 32px 0;
+  padding: 32px 0 90px 0;
   position: fixed;
   top: 0; left: 0;
   height: 100vh;
@@ -97,6 +97,71 @@ body {
   background: rgba(255,255,255,0.07);
   color: #fff;
   border-left-color: var(--accent5);
+}
+
+/* Sidebar Footer & Clear Cache Button */
+.sidebar-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 260px;
+  padding: 16px 24px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  background: var(--sidebar);
+  z-index: 101;
+}
+
+.cache-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 6px;
+  color: rgba(255,255,255,0.85);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cache-btn:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: var(--accent5);
+  color: #fff;
+}
+
+.cache-btn:active {
+  transform: scale(0.97);
+}
+
+.cache-icon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.cache-status {
+  text-align: center;
+  font-size: 11px;
+  margin-top: 8px;
+  color: rgba(255,255,255,0.5);
+  height: 16px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.cache-status.active {
+  opacity: 1;
+  color: var(--accent5);
+}
+
+.cache-status.error {
+  opacity: 1;
+  color: var(--warn);
 }
 
 .nav-item .dot {
