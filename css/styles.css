@@ -579,7 +579,7 @@ blockquote {
 }
 
 .tag.green { background: var(--accent3); }
-.tag.yellow { background: var(--accent5); color: var(--ink); }  
+.tag.yellow { background: var(--accent1)}  
 .tag.red { background: var(--warn); }
 .tag.blue { background: var(--accent2); }
 .tag.gold { background: var(--accent5); color: var(--ink); }
