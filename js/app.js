@@ -77,7 +77,8 @@ class App {
         
         // Referensi
         kesalahan: 'content/referensi/kesalahan.html',
-        prinsip: 'content/referensi/prinsip.html'
+        prinsip: 'content/referensi/prinsip.html',
+        contoh: 'content/referensi/contoh.html'
       },
       
       // Section untuk preload
